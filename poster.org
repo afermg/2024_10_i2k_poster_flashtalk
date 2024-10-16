@@ -9,7 +9,6 @@
 #+LATEX_HEADER: \usepackage{svg}
 #+BEAMER_HEADER: \definecolor{links}{HTML}{2A1B81}
 #+BEAMER_HEADER: \hypersetup{colorlinks,linkcolor=,urlcolor=links, citecolor=black}
-# #+BEAMER_HEADER: \usepackage[size=custom,width=33.11,height=46.81,scale=1.0]{beamerposter}
 
 #+bibliography: local-bib.bib
 #+cite_export: csl
