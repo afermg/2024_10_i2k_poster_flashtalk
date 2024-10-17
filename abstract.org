@@ -1,7 +1,0 @@
-#+title: Exploring gene function and morphology using JUMP Cell Painting Consortium data
-
-With the Cell Painting assay we quantify cell morphology using six dyes to stain eight cellular components: Nucleus, mitochondria, endoplasmic reticulum, nucleoli, cytoplasmic RNA, actin, golgi aparatus, and plasma membrane. After high-throughput fluorescence microscopy, image analysis algorithms then extract thousands of morphological features from each single cell’s image. By comparing of these “profiles” we can can uncover new relationships among genetic and chemical perturbations.
-
-The JUMP-CP Consortium (Joint Undertaking for Morphological Profiling-Cell Painting) released the first public high-throughput dataset with over 140,000 genetic and chemical perturbations.
-
-Here, we describe how this data can now be used to answer many biological questions. Researchers can pick any gene of interest and find (a) what morphological phenotypes are induced when it is knocked-out or overexpressed, (b) what genes produce a similar morphological profile when altered, uncovering functional relationships, and (c) what chemical compounds produce similar morphological profiles, thus alluding to their target pathway. Novel software tools developed for this dataset empower both biologists and data analysts to make discoveries of their own, and we show that mining this dataset can yield novel insights into current and relevant biological questions.

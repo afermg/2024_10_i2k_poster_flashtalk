@@ -23,7 +23,7 @@
 * Logo (Optional)                                                    :ignore:
 # use this to include logos on the left and/or right side of the header:
 
-#+BEAMER_HEADER: \logoleft{\includegraphics[height=12cm]{figs/jump_qr.png}}
+#+BEAMER_HEADER: \logoleft{\includegraphics[height=12cm]{figs/qr_hub.png}}
 #+BEAMER_HEADER: \logoright{\includegraphics[height=3cm]{logos/broad_logo.png}}
 
 # # # ====================
@@ -66,9 +66,9 @@ We generated and preprocessed a database composed of thousands of cell painting 
 [[file:figs/cell_painting_overview.png]]
 \vspace*{2cm}
 
-*** QR code to this poster
+*** Online version of this poster
 #+ATTR_LATEX: :width 0.4\textwidth
-[[file:figs/qr_flashtalk.png]]
+[[file:figs/qr_poster.png]]
 
 ** @@latex:@@ :BMCOL:
 :PROPERTIES:
@@ -79,13 +79,13 @@ We generated and preprocessed a database composed of thousands of cell painting 
 After applying batch correction, it becomes possible to query individual genes and find similar profiles. Precomputed distances for morphological profiles are made available.
 
 *** The JUMP consortium produced a massive set of morphological profiles
-#+ATTR_LATEX: :width 0.7\textwidth
+#+ATTR_LATEX: :width 0.8\textwidth
 [[file:figs/clustermap_cells_features.png]]
 *** We pre-calculated correlations between perturbations
-#+ATTR_LATEX: :width 0.7\textwidth
+#+ATTR_LATEX: :width 0.8\textwidth
 [[file:figs/clustermap_correlation.png]]
 
-*** We have also developed WebAssembly-based tools to access the data in multiple ways
+
 A gallery to fetch all the available images for a given perturbation.
 [[file:figs/gallery.png]]
 
