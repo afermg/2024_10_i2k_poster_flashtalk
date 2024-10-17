@@ -41,7 +41,7 @@
                   stdenv = pkgs.clangStdenv;
                   packages = with pkgs; [
                     texliveFull
-                    python311Packages.pygments
+                    # python311Packages.pygments
                     emacsPackages.citeproc
                     emacsPackages.org
                     emacsPackages.org-contrib
@@ -50,9 +50,19 @@
                     line-awesome
                     crimson-pro
                     noto-fonts
+                    freefont_ttf
+
+                    # Qr codes
+                    qrtool
+                    imagemagick
                   ];
+                  enterShell = ''
+                  export FONTCONFIG_FILE=$(nix-build -E 'let pkgs = import <nixpkgs> { }; in pkgs.makeFontsConf { fontDirectories = [ pkgs.freefont_ttf ]; }')
+                  '';
+                  
                 }
               ];
+              
             };
           });
     };

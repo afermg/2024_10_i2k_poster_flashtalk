@@ -1,0 +1,10 @@
+#+TITLE: Generate QR codes
+
+* JUMP Hub
+#+begin_src bash
+  magick <(magick -font NotoSans-NFP-Med -pointsize 100 label:"JUMP Hub" PNG:-) <(qrtool encode "https://broad.io/jump") -resize %[fx:u.w*1.5] -gravity center +swap -smush -95 -sharpen 0x3 figs/qr_hub.png
+#+end_src
+* Poster
+#+begin_src bash
+  magick <(magick -font NotoSans-NFP-Med -pointsize 100 label:"Poster" PNG:-) <(qrtool encode "https://github.com/afermg/2024_10_i2k_poster_flashtalk/blob/main/poster.pdf") -resize %[fx:u.w*1.5] -gravity center +swap -smush -95 -sharpen 0x3 figs/qr_poster.png
+#+end_src
