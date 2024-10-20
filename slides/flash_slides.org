@@ -1,0 +1,53 @@
+# #+title: Exploring JUMP-Cell Painting data:  The JUMP toolkit
+#+OPTIONS: ^:nil H:1 num:t toc:nil
+#+DATE: 2024/07/18
+#+Author: Alán F. Muñoz
+#+LaTeX_CLASS: beamer
+#+LATEX_HEADER: \usepackage{xcolor}
+#+BEAMER_THEME: metropolis
+#+PROPERTY: header-args:bash :eval no :exports code 
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+
+# Trimmed-down version of [[slides.org]] for a 2-minute talk
+
+
+* Exploring the Joint-Undertaking for Morphological Profiling (JUMP) Dataset
+
+[[../figs/cell_painting_overview.png]]
+
+Given gene X:
+- How do the cells look?
+- Which genes' KO/overexpression produce a similar phenotype?
+- Which features are statistically better represented?
+
+\hspace*{\fill} \textcolor{gray}{Alán F. Muñoz (amunozgo@broadinstitute.com)}
+  
+* One example of our tools: How do the cells look? 
+
+#+ATTR_LATEX: :width 0.7\linewidth
+[[../figs/jump_hub_images.png]]
+
+#+ATTR_LATEX: :width 0.7\linewidth
+[[../figs/gallery.png]]
+
+* Our JUMP Hub concentrates resources and tutorials to use JUMP data.
+We strive to make the JUMP data accessible and useful to both biologists and data scientists.
+** Poster                                                            :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+\vspace*{0.2cm}
+
+- Examples
+- Tutorials
+#+ATTR_LATEX: :width 0.7\linewidth
+[[../figs/qr_poster.png]]
+  
+** Hub                                                               :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+- FAQs
+- Links and docs
+#+ATTR_LATEX: :width 0.7\linewidth
+[[../figs/qr_hub.png]]
