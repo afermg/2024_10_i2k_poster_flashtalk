@@ -1,5 +1,7 @@
 #+TITLE: Generate QR codes
 
+Automatically generate QR codes with a label underneath and save them as a png.
+It uses imagemagick and qrtool, both installed using Nix's [[flake.nix]].
 * JUMP Hub
 #+begin_src bash
   magick <(magick -font NotoSans-NFP-Med -pointsize 100 label:"JUMP Hub" PNG:-) <(qrtool encode "https://broad.io/jump") -resize %[fx:u.w*1.5] -gravity center +swap -smush -95 -sharpen 0x3 figs/qr_hub.png

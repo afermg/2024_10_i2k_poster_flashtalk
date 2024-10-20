@@ -1,0 +1,89 @@
+#+title: Exploring JUMP-Cell Painting data:  The JUMP toolkit
+#+OPTIONS: ^:nil H:1 num:t toc:nil
+#+DATE: 2024/07/18
+#+Author: Alán F. Muñoz
+#+LaTeX_CLASS: beamer
+#+BEAMER_THEME: metropolis
+#+PROPERTY: header-args:bash :eval no :exports code 
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+
+* Cell Painting
+[[file:../figs/cellpainting.png]]
+
+* Overview of the Joint Undertaking for Morphological Profiling
+[[../figs/cell_painting_overview.png]]
+
+* This results in hundreds of thousands of morphological profiles
+#+ATTR_LATEX: :width 0.7\linewidth
+[[../figs/clustermap_cells_features.png]]
+
+* Data availability does not guarantee accessibility
+Our current goal is to increase its usability and accessibility for both biologists and data scientists.
+
+If a dataset falls in a forest and it is not heard, did it really fall?
+
+* A big dataset comes with big responsibilities
+We developed multiple tools to answer our biological questions.
+We provide in-browser querying and visualisation tools, but also python libraries for ease of access to images and metadata.
+
+Given gene X:
+- How do the cells look?
+- Which genes' KO/overexpression produce a similar phenotype?
+- Which features are statistically better represented?
+  
+* How do the cells look? 
+[[../figs/gallery.png]]
+
+* Which genes' KO/overexpression produce a similar phenotype?
+[[../figs/web_interface.png]]
+
+* Which features are statistically better represented?
+[[../figs/features.png]]
+
+* Jump Information Hub
+Find examples, links and resources to all our tools on [[https://broad.io/jump][broad.io/jump]].
+
+[[../figs/jump_hub_images.png]]
+
+* Acknowledgements
+** Carpenter-Singh Lab
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+*** Carpenter-Singh Lab
+  - Anne carpenter
+  - Shantanu Singh
+  - Niranj Chandrasekaran
+  - John Arevalo
+  - Alex Kalinin
+  - Adit Shah
+
+** Pictures                                                          :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+#+ATTR_LATEX: :width 1.1\textwidth
+[[../figs/elevator_selfie.jpg]]
+#+ATTR_LATEX: :width 0.8\textwidth
+[[../logos/broad_logo.png]]
+#+ATTR_LATEX: :width 1.2\textwidth
+[[../figs/jump_partners.png]]
+
+* Resources
+** Poster                                                            :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+[[../figs/qr_poster.png]]
+
+** JUMP hub                                                          :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+[[../figs/qr_hub.png]]
+
+* org-beamer-mode :noexport:
+Ensure org-beamer-mode upon save
+# local variables:
+# eval: (org-beamer-mode)
+# end:
