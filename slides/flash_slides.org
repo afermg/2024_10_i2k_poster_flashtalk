@@ -31,7 +31,8 @@ Given gene X:
 [[../figs/gallery.png]]
 
 * Our JUMP Hub concentrates resources and tutorials to use JUMP data.
-We strive to make the JUMP data accessible and useful to both biologists and data scientists.
+Poster is located on Board #3
+
 ** Poster                                                            :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.4

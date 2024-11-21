@@ -70,6 +70,7 @@ Find examples, links and resources to all our tools on [[https://broad.io/jump][
 [[../figs/jump_partners.png]]
 
 * Resources
+
 ** Poster                                                            :BMCOL:
 :PROPERTIES:
 :BEAMER_col: 0.4
