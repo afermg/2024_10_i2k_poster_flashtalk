@@ -11,22 +11,16 @@ nix-shell --run make
 
 A repository for reproducible poster generation. It uses nix for dependency management and to be self-contained.
 
-* Dependencies
-- Emacs28+
-- TexLive
-
 * Project publish function
 
 This section is used to publish the documentation to =html= and =pdf= in the
 =pub/= directory.
 
-This code defines the =publish-html-cv= and =publish-pdf-cv= which are used to
-publish the CV into =html= and =pdf=, respectively.
+This code defines the =publish-pdf= command, used to generate the published poster.
 
-** PDF export
-*** LaTeX style
+** LaTeX style
 
-**** =org= preamble
+*** =org= preamble
 :PROPERTIES:
 :HEADER-ARGS: :tangle org-preamble.sty
 :END:
@@ -35,54 +29,35 @@ This section defines =org= preamble and settings for documents exported from
 =.org= to =.tex= files. The basic use is to add =\usepackage{org-preamble}= in
 your LaTeX document.
 
-***** Packages requirements
+**** Packages requirements
 
-****** AMS packages
+***** AMS packages
 #+BEGIN_SRC latex
   %% \RequirePackage{amsmath,amssymb}
 #+END_SRC
 
-****** hyperref package
+***** hyperref package
 #+BEGIN_SRC latex
   \RequirePackage{hyperref}
 #+END_SRC
-
-**** CV style
 :PROPERTIES:
 :HEADER-ARGS: :tangle cv-style.sty
 :END:
 
-***** Colors
+**** Lengths
 #+BEGIN_SRC latex
-  \definecolor{red}{RGB}{221,42,43}
-  \definecolor{green}{RGB}{105,182,40}
-  \definecolor{blue}{RGB}{0,51,153}
-  \definecolor{gray}{RGB}{25,25,25}
-  %\definecolor{red}{HTML}{D43F3F}
-  %\definecolor{blue}{HTML}{00ACE9}
-  %\definecolor{green}{HTML}{6A9A1F}
-  \colorlet{theMainColor}{blue}
-  \colorlet{theRefColor}{blue!90}
-  \newcommand{\globalcolor}[1]{%
-    \color{#1}\global\let\default@color\current@color
-  }
+% ====================
+% Lengths
+% ====================
+
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}
+\setlength{\colwidth}{0.3\paperwidth}
 #+END_SRC
 
-#+RESULTS:
-#+begin_export latex
-\definecolor{red}{RGB}{221,42,43}
-  \definecolor{green}{RGB}{105,182,40}
-  \definecolor{blue}{RGB}{0,51,153}
-  \definecolor{gray}{RGB}{25,25,25}
-  %\definecolor{red}{HTML}{D43F3F}
-  %\definecolor{blue}{HTML}{00ACE9}
-  %\definecolor{green}{HTML}{6A9A1F}
-  \colorlet{theMainColor}{blue}
-  \colorlet{theRefColor}{blue!90}
-  \newcommand{\globalcolor}[1]{%
-    \color{#1}\global\let\default@color\current@color
-  }
-#+end_export
 
 *** =org= to LaTeX stuff
 **** Use smart quote when exporting
@@ -184,9 +159,9 @@ Enables :ignore: tags for optional headlines, or headlines used as comments.
         ;; :latex-header-extra ""
         ))
      
-   ;; (add-to-list 'load-path "~/.emacs.d/elpa")
-   ;; (package-initialize)
-   ;; (require 'citeproc)
+   (add-to-list 'load-path "~/.emacs.d/elpa")
+   (package-initialize)
+   (package-install 'citeproc)
 #+END_SRC
 
 * Exporter functions
