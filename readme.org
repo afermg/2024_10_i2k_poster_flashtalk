@@ -177,7 +177,7 @@ Enables :ignore: tags for optional headlines, or headlines used as comments.
   (defun org-publish-pdf ()
     (progn
       (org-publish-project "publish-pdf" 'force)
-      (shell-command "mv ./latex.d pub/pdf/.; mv -f poster* *.sty ./pub/pdf/latex.d/.; mv ./pub/pdf/latex.d/poster*.org .")
+      (shell-command "mv ./latex.d pdf/.; mv -f poster* *.sty ./pub/latex.d/.; mv ./pub/latex.d/poster*.org .")
       ))
 #+END_SRC
 
