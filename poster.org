@@ -7,18 +7,16 @@
 #+BEAMER_THEME: gemini
 #+BEAMER_COLOR_THEME: gemini
 #+LATEX_HEADER: \usepackage{svg}
-#+BEAMER_HEADER: \definecolor{links}{HTML}{2A1B81}
-#+BEAMER_HEADER: \hypersetup{colorlinks,linkcolor=,urlcolor=links, citecolor=black}
 
 #+bibliography: local-bib.bib
 #+cite_export: csl
 
 * Footer (Optional)                                                  :ignore:
-# #+BEAMER_HEADER: \footercontent{
-# #+BEAMER_HEADER:  \href{https://github.com/afermg/2024\_10\_i2k\_poster\_flashtalk/blob/main/poster.pdf}{github.com/afermg/2024\_10\_i2k\_poster\_flashtalk/blob/main/poster.pdf} \hfill
-# #+BEAMER_HEADER:  I2K 2024, Milan, Italy \hfill
-# #+BEAMER_HEADER:  \href{mailto:amunozgo@broadinstitute.org}{amunozgo@broadinstitute.org}}
-# # (can be left out to remove footer)
+#+BEAMER_HEADER: \footercontent{
+#+BEAMER_HEADER:  \href{https://github.com/afermg/2024\_10\_i2k\_poster\_flashtalk/blob/main/poster.pdf}{github.com/afermg/2024\_10\_i2k\_poster\_flashtalk/blob/main/poster.pdf} \hfill
+#+BEAMER_HEADER:  I2K 2024, Milan, Italy \hfill
+#+BEAMER_HEADER:  \href{mailto:amunozgo@broadinstitute.org}{amunozgo@broadinstitute.org}}
+# (can be left out to remove footer)
 
 * Logo (Optional)                                                    :ignore:
 # use this to include logos on the left and/or right side of the header:

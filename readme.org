@@ -7,6 +7,8 @@ Provided you have nix this should be all you need.
 nix-shell --run make
 #+end_src
 
+#+RESULTS:
+
 * Introduction
 
 A repository for reproducible poster generation. It uses nix for dependency management and to be self-contained.
@@ -30,21 +32,25 @@ This section defines =org= preamble and settings for documents exported from
 your LaTeX document.
 
 **** Packages requirements
+***** Style
 
-***** AMS packages
+****** AMS packages
 #+BEGIN_SRC latex
   %% \RequirePackage{amsmath,amssymb}
 #+END_SRC
 
-***** hyperref package
+****** hyperref package
 #+BEGIN_SRC latex
   \RequirePackage{hyperref}
 #+END_SRC
-:PROPERTIES:
-:HEADER-ARGS: :tangle cv-style.sty
-:END:
 
-**** Lengths
+****** hyperref package
+#+BEGIN_SRC latex
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links, citecolor=black}
+#+END_SRC
+
+****** Lengths
 #+BEGIN_SRC latex
 % ====================
 % Lengths
@@ -87,6 +93,7 @@ Only include one default package and remove all the crapppy stuff included by
 |   | org-preamble |
 
 **** =org= LaTeX class
+Adjust poster size here
 #+BEGIN_SRC emacs-lisp
   (unless (boundp 'org-latex-classes)
     (setq org-latex-classes nil))
@@ -103,6 +110,7 @@ Only include one default package and remove all the crapppy stuff included by
            \\usepackage{pgfplots}
            \\pgfplotsset{compat=1.18}
            \\usepackage{anyfontsize}
+  
            [NO-DEFAULT-PACKAGES]"))
 #+END_SRC
 
