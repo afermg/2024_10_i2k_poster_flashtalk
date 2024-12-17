@@ -8,7 +8,7 @@
 #+BEAMER_COLOR_THEME: gemini
 #+LATEX_HEADER: \usepackage{svg}
 
-#+bibliography: local-bib.bib
+#+bibliography: ../local-bib.bib
 #+cite_export: csl
 
 * Footer (Optional)                                                  :ignore:
@@ -21,8 +21,8 @@
 * Logo (Optional)                                                    :ignore:
 # use this to include logos on the left and/or right side of the header:
 
-#+BEAMER_HEADER: \logoleft{\includegraphics[height=12cm]{figs/qr_hub.png}}
-#+BEAMER_HEADER: \logoright{\includegraphics[height=3cm]{logos/broad_logo.png}}
+#+BEAMER_HEADER: \logoleft{\includegraphics[height=12cm]{../figs/qr_hub.png}}
+#+BEAMER_HEADER: \logoright{\includegraphics[height=3cm]{../logos/broad_logo.png}}
 
 # # # ====================
 # # # Body
@@ -55,18 +55,18 @@ Here, we describe how this data can now be used to answer many biological questi
 
 *** We use data from the Cell Painting assay, in which cellular components are stained using six dyes and imaged in five channels
 #+ATTR_LATEX: :width 1\textwidth
-[[file:figs/cellpainting.png]]
+[[file:../figs/cellpainting.png]]
 \vspace*{2cm}
 
 *** Morphological profiles were generated at a high-throughput scale
 We generated and preprocessed a database composed of thousands of cell painting experiments.
 #+ATTR_LATEX: :width 1\textwidth
-[[file:figs/cell_painting_overview.png]]
+[[file:../figs/cell_painting_overview.png]]
 \vspace*{2cm}
 
 *** Online version of this poster
 #+ATTR_LATEX: :width 0.4\textwidth
-[[file:figs/qr_poster.png]]
+[[file:../figs/qr_poster.png]]
 
 ** @@latex:@@ :BMCOL:
 :PROPERTIES:
@@ -78,18 +78,18 @@ After applying batch correction, it becomes possible to query individual genes a
 
 *** The JUMP consortium produced a massive set of morphological profiles
 #+ATTR_LATEX: :width 0.8\textwidth
-[[file:figs/clustermap_cells_features.png]]
+[[file:../figs/clustermap_cells_features.png]]
 *** We pre-calculated correlations between perturbations
 #+ATTR_LATEX: :width 0.8\textwidth
-[[file:figs/clustermap_correlation.png]]
+[[file:../figs/clustermap_correlation.png]]
 
 
 A gallery to fetch all the available images for a given perturbation.
-[[file:figs/gallery.png]]
+[[file:../figs/gallery.png]]
 
 *** Which other perturbations produce a phenotype similar to my gene of interest?
 We developed an ecosystem tools for scientist to find the perturbations most similar to theirs. 
-[[file:figs/web_interface.png]]
+[[file:../figs/web_interface.png]]
 
 ** @@latex:@@ :BMCOL:
 :PROPERTIES:
@@ -97,7 +97,7 @@ We developed an ecosystem tools for scientist to find the perturbations most sim
 :END:
 *** Which features are the most significant for my gene of interest?
 Statistical values of all features for a given perturbation.
-[[file:figs/features.png]]
+[[file:../figs/features.png]]
 
 *** A standard analysis workflow has the following steps:
 1. Find the most correlated and anticorrelated genes.
@@ -118,7 +118,7 @@ We compare images using tools that decompose the channels to focus on the most i
  
 Examples of these tools and other workflows are available on the JUMP Hub.
 
-[[file:figs/jump_hub_images.png]]
+[[file:../figs/jump_hub_images.png]]
 
 
 *** Available resources
