@@ -11,15 +11,15 @@ BATCH=$(EMACS) --batch --no-init-file					\
   --eval '(org-babel-load-file   "readme.org")'
 
 files_org  = $(wildcard poster*.org)
-files_pdf  = $(addprefix pub/pdf/,$(files_org:.org=.pdf))
+files_pdf  = $(addprefix pub/,$(files_org:.org=.pdf))
 
 all: pdf 
 
 pdf: $(files_pdf)
-pub/pdf/%.pdf: %.org
+pub/%.pdf: %.org
 	@$(BATCH) --visit "$<" --funcall org-publish-pdf
 	@rm readme.el
 
 clean:
-	@rm -f *.elc *.aux *.tex *.pdf *~ *.sty
+	@rm -f *.elc *.aux *.tex *.pdf *~ *preamble.sty
 	@rm -rf pub

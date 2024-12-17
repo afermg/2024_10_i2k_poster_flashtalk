@@ -123,16 +123,6 @@ Adjust poster size here
 #+RESULTS:
 | latexmk -xelatex -shell-escape -quiet %f |
 
-**** Markup filter
-Remove the quote block
-#+BEGIN_SRC emacs-lisp
-  ;; (defun latex::cv-quote-filter (contents backend info)
-  ;;   (when (eq backend 'latex)
-  ;;     (replace-regexp-in-string "." "" contents)))
-  ;; (add-to-list 'org-export-filter-quote-block-functions
-  ;;              'latex::cv-quote-filter)
-#+END_SRC
-
 **** ox-extra
 Enables :ignore: tags for optional headlines, or headlines used as comments.
 #+begin_src elisp
@@ -158,9 +148,9 @@ Enables :ignore: tags for optional headlines, or headlines used as comments.
       `("publish-pdf"
         :base-directory ,this-directory
         :base-extension "org"
-        :publishing-directory ,(expand-file-name "pdf" pub-directory)
+        :publishing-directory ,pub-directory
         :publishing-function org-beamer-publish-to-pdf
-        :exclude ".*publish.*.org\\|readme.org\\|flake.*"
+        :exclude ".*publish.*.org\\|readme.org\\|qr.org\\|abstract.org"
         ;; :section-numbers 2
         :with-toc        nil
         :latex-class "beamerposter"
@@ -177,7 +167,7 @@ Enables :ignore: tags for optional headlines, or headlines used as comments.
   (defun org-publish-pdf ()
     (progn
       (org-publish-project "publish-pdf" 'force)
-      (shell-command "mv ./latex.d pdf/.; mv -f poster* *.sty ./pub/latex.d/.; mv ./pub/latex.d/poster*.org .")
+      (shell-command "mv ./latex.d pub/.; mv -f poster* *.sty ./pub/latex.d/.; mv ./pub/latex.d/poster*.org .")
       ))
 #+END_SRC
 
