@@ -51,13 +51,12 @@
                     crimson-pro
                     noto-fonts
                     freefont_ttf
-
                     # Qr codes
                     qrtool
                     imagemagick
                   ];
                   enterShell = ''
-                  export FONTCONFIG_FILE=$(nix-build -E 'let pkgs = import <nixpkgs> { }; in pkgs.makeFontsConf { fontDirectories = [ pkgs.freefont_ttf ]; }')
+                  export FONTCONFIG_FILE=$(nix-build -E 'let pkgs = import <nixpkgs> { }; in pkgs.makeFontsConf { fontDirectories = [ pkgs.freefont_ttf pkgs.raleway pkgs.lato]; }')
                   '';
                   
                 }
