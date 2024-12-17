@@ -160,7 +160,7 @@ Enables :ignore: tags for optional headlines, or headlines used as comments.
         :base-extension "org"
         :publishing-directory ,(expand-file-name "pdf" pub-directory)
         :publishing-function org-beamer-publish-to-pdf
-        :exclude ".*publish.*.org\\|README.org"
+        :exclude ".*publish.*.org\\|readme.org\\|flake.*"
         ;; :section-numbers 2
         :with-toc        nil
         :latex-class "beamerposter"
